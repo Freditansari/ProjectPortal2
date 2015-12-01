@@ -36,6 +36,9 @@
                                 <asp:TextBox runat="server" ID="Email" TextMode="Email" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
                                     CssClass="field-validation-error" ErrorMessage="The email address field is required." />
+                                <%--<asp:CompareValidator ID="emailValidator" ControlToValidate="Email" runat="server" CssClass="field-validation-error" ErrorMessage="Please enter correct email"></asp:CompareValidator>--%>
+                                <asp:RegularExpressionValidator ID="emailValidator" runat="server" ErrorMessage="Please Enter a real email" ControlToValidate="Email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+
                             </li>
                             <li>
                                 <asp:Label runat="server" AssociatedControlID="Password">Password</asp:Label>
