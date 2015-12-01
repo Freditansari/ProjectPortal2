@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TasksModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TasksEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Departments" EntityType="TasksModel.Department" />
+    <EntitySet Name="Projects" EntityType="TasksModel.Project" />
+    <AssociationSet Name="FK__Projects__Depart__3C69FB99" Association="TasksModel.FK__Projects__Depart__3C69FB99">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Projects" EntitySet="Projects" />
+    </AssociationSet>
+    <EntitySet Name="Tasks" EntityType="TasksModel.Task" />
+    <AssociationSet Name="FK__Tasks__ProjectID__3B75D760" Association="TasksModel.FK__Tasks__ProjectID__3B75D760">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="Task" EntitySet="Tasks" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="Department1" />
+    </Key>
+    <Property Name="Department1" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Projects" Relationship="TasksModel.FK__Projects__Depart__3C69FB99" FromRole="Departments" ToRole="Projects" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Department" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProjectName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="isCompleted" Type="Boolean" />
+    <Property Name="UserID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Department1" Relationship="TasksModel.FK__Projects__Depart__3C69FB99" FromRole="Projects" ToRole="Departments" />
+    <NavigationProperty Name="Tasks" Relationship="TasksModel.FK__Tasks__ProjectID__3B75D760" FromRole="Project" ToRole="Task" />
+  </EntityType>
+  <Association Name="FK__Projects__Depart__3C69FB99">
+    <End Role="Departments" Type="TasksModel.Department" Multiplicity="0..1" />
+    <End Role="Projects" Type="TasksModel.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="Department1" />
+      </Principal>
+      <Dependent Role="Projects">
+        <PropertyRef Name="Department" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Task">
+    <Key>
+      <PropertyRef Name="TaskID" />
+    </Key>
+    <Property Type="Int32" Name="TaskID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ProjectID" />
+    <Property Type="String" Name="TaskName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TaskDescription" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="StartDate" Precision="3" />
+    <Property Type="DateTime" Name="EndDate" Precision="3" />
+    <Property Type="Boolean" Name="isCompleted" />
+    <Property Type="String" Name="Creator" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="assignedUser" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FinishedDate" Precision="3" />
+    <NavigationProperty Name="Project" Relationship="TasksModel.FK__Tasks__ProjectID__3B75D760" FromRole="Task" ToRole="Project" />
+  </EntityType>
+  <Association Name="FK__Tasks__ProjectID__3B75D760">
+    <End Type="TasksModel.Project" Role="Project" Multiplicity="0..1" />
+    <End Type="TasksModel.Task" Role="Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectID" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,72 @@
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\obj\Debug\ProjectPortal.dll.licenses
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\ProjectPortal.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\ProjectPortal.pdb
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\Antlr3.Runtime.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.Core.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\EntityFramework.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\System.Web.Optimization.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\System.Web.Providers.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\Telerik.Web.UI.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\WebGrease.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\EntityFramework.xml
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.Core.xml
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\Telerik.Web.UI.xml
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\obj\Debug\ProjectPortal.dll
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\obj\Debug\ProjectPortal.pdb
+C:\Users\fredy\documents\visual studio 2012\Projects\ProjectPortal\ProjectPortal\obj\Debug\ProjectPortal.csprojResolveAssemblyReference.cache
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\ProjectPortal.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\ProjectPortal.pdb
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\Antlr3.Runtime.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.Core.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\EntityFramework.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\System.Web.Optimization.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\System.Web.Providers.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\Telerik.Web.UI.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\WebGrease.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\EntityFramework.xml
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.Core.xml
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\Telerik.Web.UI.xml
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\obj\Debug\ProjectPortal.dll.licenses
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\obj\Debug\ProjectPortal.dll
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\obj\Debug\ProjectPortal.pdb
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal\obj\Debug\ProjectPortal.csprojResolveAssemblyReference.cache

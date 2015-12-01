@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TasksModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="TasksModelStoreContainer">
+    <EntitySet Name="Departments" EntityType="TasksModel.Store.Departments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Projects" EntityType="TasksModel.Store.Projects" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tasks" EntityType="TasksModel.Store.Tasks" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__Projects__Depart__3C69FB99" Association="TasksModel.Store.FK__Projects__Depart__3C69FB99">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Projects" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tasks__ProjectID__3B75D760" Association="TasksModel.Store.FK__Tasks__ProjectID__3B75D760">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Departments">
+    <Key>
+      <PropertyRef Name="Department" />
+    </Key>
+    <Property Name="Department" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Projects">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Department" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProjectName" Type="nvarchar(max)" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="isCompleted" Type="bit" />
+    <Property Name="UserID" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Tasks">
+    <Key>
+      <PropertyRef Name="TaskID" />
+    </Key>
+    <Property Name="TaskID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="int" />
+    <Property Name="TaskName" Type="nvarchar(max)" />
+    <Property Name="TaskDescription" Type="nvarchar(max)" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="isCompleted" Type="bit" />
+    <Property Name="Creator" Type="nvarchar(max)" />
+    <Property Name="assignedUser" Type="nvarchar" MaxLength="512" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="FinishedDate" Type="datetime" />
+  </EntityType>
+  <Association Name="FK__Projects__Depart__3C69FB99">
+    <End Role="Departments" Type="TasksModel.Store.Departments" Multiplicity="0..1" />
+    <End Role="Projects" Type="TasksModel.Store.Projects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="Department" />
+      </Principal>
+      <Dependent Role="Projects">
+        <PropertyRef Name="Department" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tasks__ProjectID__3B75D760">
+    <End Role="Projects" Type="TasksModel.Store.Projects" Multiplicity="0..1" />
+    <End Role="Tasks" Type="TasksModel.Store.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ProjectID" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TasksModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="TasksModelStoreContainer">
+          <EntitySet Name="Departments" EntityType="TasksModel.Store.Departments" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Projects" EntityType="TasksModel.Store.Projects" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tasks" EntityType="TasksModel.Store.Tasks" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__Projects__Depart__3C69FB99" Association="TasksModel.Store.FK__Projects__Depart__3C69FB99">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="Projects" EntitySet="Projects" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tasks__ProjectID__3B75D760" Association="TasksModel.Store.FK__Tasks__ProjectID__3B75D760">
+            <End Role="Projects" EntitySet="Projects" />
+            <End Role="Tasks" EntitySet="Tasks" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Departments">
+          <Key>
+            <PropertyRef Name="Department" />
+          </Key>
+          <Property Name="Department" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Projects">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Name="ProjectID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Department" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProjectName" Type="nvarchar(max)" />
+          <Property Name="StartDate" Type="date" />
+          <Property Name="EndDate" Type="date" />
+          <Property Name="isCompleted" Type="bit" />
+          <Property Name="UserID" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Tasks">
+          <Key>
+            <PropertyRef Name="TaskID" />
+          </Key>
+          <Property Name="TaskID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="int" />
+          <Property Name="TaskName" Type="nvarchar(max)" />
+          <Property Name="TaskDescription" Type="nvarchar(max)" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="isCompleted" Type="bit" />
+          <Property Name="Creator" Type="nvarchar(max)" />
+          <Property Name="assignedUser" Type="nvarchar" MaxLength="512" />
+          <Property Name="Remarks" Type="nvarchar(max)" />
+          <Property Name="FinishedDate" Type="datetime" />
+        </EntityType>
+        <Association Name="FK__Projects__Depart__3C69FB99">
+          <End Role="Departments" Type="TasksModel.Store.Departments" Multiplicity="0..1" />
+          <End Role="Projects" Type="TasksModel.Store.Projects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="Department" />
+            </Principal>
+            <Dependent Role="Projects">
+              <PropertyRef Name="Department" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tasks__ProjectID__3B75D760">
+          <End Role="Projects" Type="TasksModel.Store.Projects" Multiplicity="0..1" />
+          <End Role="Tasks" Type="TasksModel.Store.Tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Projects">
+              <PropertyRef Name="ProjectID" />
+            </Principal>
+            <Dependent Role="Tasks">
+              <PropertyRef Name="ProjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TasksModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TasksEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Departments" EntityType="TasksModel.Department" />
+          <EntitySet Name="Projects" EntityType="TasksModel.Project" />
+          <AssociationSet Name="FK__Projects__Depart__3C69FB99" Association="TasksModel.FK__Projects__Depart__3C69FB99">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="Projects" EntitySet="Projects" />
+          </AssociationSet>
+          <EntitySet Name="Tasks" EntityType="TasksModel.Task" />
+          <AssociationSet Name="FK__Tasks__ProjectID__3B75D760" Association="TasksModel.FK__Tasks__ProjectID__3B75D760">
+            <End Role="Project" EntitySet="Projects" />
+            <End Role="Task" EntitySet="Tasks" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="Department1" />
+          </Key>
+          <Property Name="Department1" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Projects" Relationship="TasksModel.FK__Projects__Depart__3C69FB99" FromRole="Departments" ToRole="Projects" />
+        </EntityType>
+        <EntityType Name="Project">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Name="ProjectID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Department" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProjectName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="StartDate" Type="DateTime" Precision="0" />
+          <Property Name="EndDate" Type="DateTime" Precision="0" />
+          <Property Name="isCompleted" Type="Boolean" />
+          <Property Name="UserID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Department1" Relationship="TasksModel.FK__Projects__Depart__3C69FB99" FromRole="Projects" ToRole="Departments" />
+          <NavigationProperty Name="Tasks" Relationship="TasksModel.FK__Tasks__ProjectID__3B75D760" FromRole="Project" ToRole="Task" />
+        </EntityType>
+        <Association Name="FK__Projects__Depart__3C69FB99">
+          <End Role="Departments" Type="TasksModel.Department" Multiplicity="0..1" />
+          <End Role="Projects" Type="TasksModel.Project" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="Department1" />
+            </Principal>
+            <Dependent Role="Projects">
+              <PropertyRef Name="Department" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="TaskID" />
+          </Key>
+          <Property Type="Int32" Name="TaskID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ProjectID" />
+          <Property Type="String" Name="TaskName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TaskDescription" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="StartDate" Precision="3" />
+          <Property Type="DateTime" Name="EndDate" Precision="3" />
+          <Property Type="Boolean" Name="isCompleted" />
+          <Property Type="String" Name="Creator" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="assignedUser" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Remarks" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="FinishedDate" Precision="3" />
+          <NavigationProperty Name="Project" Relationship="TasksModel.FK__Tasks__ProjectID__3B75D760" FromRole="Task" ToRole="Project" />
+        </EntityType>
+        <Association Name="FK__Tasks__ProjectID__3B75D760">
+          <End Type="TasksModel.Project" Role="Project" Multiplicity="0..1" />
+          <End Type="TasksModel.Task" Role="Task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Project">
+              <PropertyRef Name="ProjectID" />
+            </Principal>
+            <Dependent Role="Task">
+              <PropertyRef Name="ProjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TasksModelStoreContainer" CdmEntityContainer="TasksEntities">
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="TasksModel.Department">
+              <MappingFragment StoreEntitySet="Departments">
+                <ScalarProperty Name="Department1" ColumnName="Department" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Projects">
+            <EntityTypeMapping TypeName="TasksModel.Project">
+              <MappingFragment StoreEntitySet="Projects">
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="isCompleted" ColumnName="isCompleted" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tasks">
+            <EntityTypeMapping TypeName="TasksModel.Task">
+              <MappingFragment StoreEntitySet="Tasks">
+                <ScalarProperty Name="FinishedDate" ColumnName="FinishedDate" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="assignedUser" ColumnName="assignedUser" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="isCompleted" ColumnName="isCompleted" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="TaskDescription" ColumnName="TaskDescription" />
+                <ScalarProperty Name="TaskName" ColumnName="TaskName" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
