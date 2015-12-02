@@ -336,6 +336,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="global.cs" />
     <Compile Include="Project.cs">
       <DependentUpon>ProjectPortals.tt</DependentUpon>
     </Compile>

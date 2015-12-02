@@ -16,8 +16,12 @@ namespace ProjectPortal
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            UserIDDDL.DataSource= Membership.GetAllUsers();
-            UserIDDDL.DataBind();
+            if (!Page.IsPostBack)
+            {
+                UserIDDDL.DataSource = Membership.GetAllUsers();
+                UserIDDDL.DataBind();    
+            }
+            
 
             userIDLabel.Text = User.Identity.Name.ToString();
 
@@ -53,8 +57,12 @@ namespace ProjectPortal
                     message.IsBodyHtml = true;
                     message.Subject = "New task assigned";
 
+                    
+                    
                     //message.Body = "You have a new task assigned to you. Please access: " + HttpContext.Current.Request.Url.AbsoluteUri +" for more details.<br>"+newTask.TaskID.ToString()+"  "+newTask.TaskName+" <br> " +newTask.TaskDescription;
-                    message.Body = "You have a new task assigned to you. Please access: " + HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority) + "/TasksDetails.aspx?TaskID=" + newTask.TaskID.ToString() + " for more details.<br>Task Name:"+newTask.TaskName+" <br> Task Description: " +newTask.TaskDescription;
+                    //message.Body = "You have a new task assigned to you. Please access: " + HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority) + "/TasksDetails.aspx?TaskID=" + newTask.TaskID.ToString() + " for more details.<br>Task Name:"+newTask.TaskName+" <br> Task Description: " +newTask.TaskDescription;
+                    //message.Body = "You have a new task assigned to you. Please access: " + HttpContext.Current.Request.Url.Host.ToLower() + "/TasksDetails.aspx?TaskID=" + newTask.TaskID.ToString() + " for more details.<br>Task Name:" + newTask.TaskName + " <br> Task Description: " + newTask.TaskDescription; ==> this still spew ip address
+                    message.Body = "You have a new task assigned to you. Please access: " + global.DomainName  + "/TasksDetails.aspx?TaskID=" + newTask.TaskID.ToString() + " for more details.<br>Task Name:" + newTask.TaskName + " <br> Task Description: " + newTask.TaskDescription; 
 
                     var client = new SmtpClient();
                     client.EnableSsl = true;

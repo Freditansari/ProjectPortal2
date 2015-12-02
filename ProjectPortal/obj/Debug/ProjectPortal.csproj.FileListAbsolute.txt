@@ -102,7 +102,6 @@ C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal2\ProjectPortal\bin\D
 C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal2\ProjectPortal\bin\Microsoft.AspNet.Membership.OpenAuth.xml
 C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal2\ProjectPortal\bin\Telerik.Web.UI.xml
 C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal2\ProjectPortal\bin\Microsoft.AspNet.FriendlyUrls.xml
-C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal2\ProjectPortal\obj\Debug\ProjectPortal.csprojResolveAssemblyReference.cache
 C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal2\ProjectPortal\obj\Debug\ProjectPortal.dll.licenses
 C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal2\ProjectPortal\obj\Debug\ProjectPortal.dll
 C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal2\ProjectPortal\obj\Debug\ProjectPortal.pdb

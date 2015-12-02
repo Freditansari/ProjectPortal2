@@ -99,8 +99,9 @@
             <td>Asssign to:</td>
             <td></td>
             <td colspan="2">
-                <asp:DropDownList ID="UserIDDDL" runat="server">
+                <asp:DropDownList ID="UserIDDDL" AppendDataBoundItems="true" runat="server">
                 </asp:DropDownList>
+                <%--<asp:CompareValidator ID="userValidator" runat="server" ControlToValidate="UserIDDDL" ErrorMessage="*" ValueToCompare="Select a user!">*</asp:CompareValidator>--%>
             </td>
         </tr>
         <tr>

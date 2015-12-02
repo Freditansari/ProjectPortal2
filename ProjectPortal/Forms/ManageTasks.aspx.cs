@@ -133,7 +133,9 @@ namespace ProjectPortal
                         message.Subject = "New task assigned";
 
                         //message.Body = "You have a new task assigned to you. Please access: " + HttpContext.Current.Request.Url.AbsoluteUri +" for more details.<br>"+newTask.TaskID.ToString()+"  "+newTask.TaskName+" <br> " +newTask.TaskDescription;
-                        message.Body = "You have a new task assigned to you. Please access: " + HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority) + "/TasksDetails.aspx?TaskID=" +selectedTasks.TaskID.ToString() + " for more details.<br>Task Name:" + selectedTasks.TaskName+ " <br> Task Description: " + selectedTasks.TaskDescription;
+                        //message.Body = "You have a new task assigned to you. Please access: " + HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority) + "/TasksDetails.aspx?TaskID=" +selectedTasks.TaskID.ToString() + " for more details.<br>Task Name:" + selectedTasks.TaskName+ " <br> Task Description: " + selectedTasks.TaskDescription;
+                        //message.Body = "You have a new task assigned to you. Please access: " + HttpContext.Current.Request.Url.Host.ToLower()+ "/TasksDetails.aspx?TaskID=" + selectedTasks.TaskID.ToString() + " for more details.<br>Task Name:" + selectedTasks.TaskName + " <br> Task Description: " + selectedTasks.TaskDescription;
+                        message.Body = "You have a new task assigned to you. Please access: " + global.DomainName + "/TasksDetails.aspx?TaskID=" + selectedTasks.TaskID.ToString() + " for more details.<br>Task Name:" + selectedTasks.TaskName + " <br> Task Description: " + selectedTasks.TaskDescription;
 
                         var client = new SmtpClient();
                         client.EnableSsl = true;

@@ -23,4 +23,5 @@
         <asp:QueryStringParameter Name="TaskID" QueryStringField="TaskID" Type="Int32" />
     </SelectParameters>
 </asp:SqlDataSource>
+    <asp:Button ID="FinishButton" runat="server" OnClick="FinishButton_Click" Text="Finish!" />
 </asp:Content>
