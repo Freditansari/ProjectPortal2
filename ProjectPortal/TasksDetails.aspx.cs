@@ -13,7 +13,7 @@ namespace ProjectPortal
         protected void Page_Load(object sender, EventArgs e)
         {
             queryString = Request.QueryString["TaskID"];
-            if (queryString == null)
+            if (!System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
             {
                 FinishButton.Enabled = false;
             }
