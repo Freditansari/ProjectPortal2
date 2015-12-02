@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TasksDetails.aspx.cs" Inherits="ProjectPortal.WebForm7" %>
+<%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
@@ -23,5 +24,9 @@
         <asp:QueryStringParameter Name="TaskID" QueryStringField="TaskID" Type="Int32" />
     </SelectParameters>
 </asp:SqlDataSource>
+    <telerik:RadTextBox ID="NoteTextBox" Runat="server" EmptyMessage="enter a note here!" Height="115px" TextMode="MultiLine" Width="329px">
+    </telerik:RadTextBox>
+    <br />
+
     <asp:Button ID="FinishButton" runat="server" OnClick="FinishButton_Click" Text="Finish!" />
 </asp:Content>

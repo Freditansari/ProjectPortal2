@@ -33,6 +33,7 @@ namespace ProjectPortal
 
                 selectedTask.isCompleted = true;
                 selectedTask.FinishedDate = DateTime.Now;
+                selectedTask.Remarks = NoteTextBox.Text;
 
                 db.SaveChanges();
                 DetailsView1.DataBind();
