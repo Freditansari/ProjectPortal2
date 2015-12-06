@@ -3,6 +3,7 @@
   <EntityContainer Name="TasksModelStoreContainer">
     <EntitySet Name="Departments" EntityType="TasksModel.Store.Departments" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Projects" EntityType="TasksModel.Store.Projects" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Rectifications" EntityType="TasksModel.Store.Rectifications" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Tasks" EntityType="TasksModel.Store.Tasks" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="FK__Projects__Depart__3C69FB99" Association="TasksModel.Store.FK__Projects__Depart__3C69FB99">
       <End Role="Departments" EntitySet="Departments" />
@@ -11,6 +12,10 @@
     <AssociationSet Name="FK__Tasks__ProjectID__3B75D760" Association="TasksModel.Store.FK__Tasks__ProjectID__3B75D760">
       <End Role="Projects" EntitySet="Projects" />
       <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rectifications_Tasks" Association="TasksModel.Store.FK_Rectifications_Tasks">
+      <End Role="Tasks" EntitySet="Tasks" />
+      <End Role="Rectifications" EntitySet="Rectifications" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Departments">
@@ -30,6 +35,16 @@
     <Property Name="EndDate" Type="date" />
     <Property Name="isCompleted" Type="bit" />
     <Property Name="UserID" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Rectifications">
+    <Key>
+      <PropertyRef Name="RectificationID" />
+    </Key>
+    <Property Name="RectificationID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RectificationDate" Type="datetime" />
+    <Property Name="RectificationNotes" Type="nvarchar(max)" />
+    <Property Name="userID" Type="nvarchar" MaxLength="255" />
+    <Property Name="TaskID" Type="int" />
   </EntityType>
   <EntityType Name="Tasks">
     <Key>
@@ -68,6 +83,18 @@
       </Principal>
       <Dependent Role="Tasks">
         <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rectifications_Tasks">
+    <End Role="Tasks" Type="TasksModel.Store.Tasks" Multiplicity="0..1" />
+    <End Role="Rectifications" Type="TasksModel.Store.Rectifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tasks">
+        <PropertyRef Name="TaskID" />
+      </Principal>
+      <Dependent Role="Rectifications">
+        <PropertyRef Name="TaskID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

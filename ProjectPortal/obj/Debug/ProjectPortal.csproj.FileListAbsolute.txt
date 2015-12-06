@@ -105,3 +105,4 @@ C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal2\ProjectPortal\bin\M
 C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal2\ProjectPortal\obj\Debug\ProjectPortal.dll.licenses
 C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal2\ProjectPortal\obj\Debug\ProjectPortal.dll
 C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal2\ProjectPortal\obj\Debug\ProjectPortal.pdb
+C:\Users\fredy\Documents\GitHub\ProjectPortal\ProjectPortal2\ProjectPortal\obj\Debug\ProjectPortal.csprojResolveAssemblyReference.cache

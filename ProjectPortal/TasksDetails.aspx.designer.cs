@@ -13,6 +13,15 @@ namespace ProjectPortal {
     public partial class WebForm7 {
         
         /// <summary>
+        /// tasksDetailsDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource tasksDetailsDataSource;
+        
+        /// <summary>
         /// DetailsView1 control.
         /// </summary>
         /// <remarks>
@@ -22,13 +31,40 @@ namespace ProjectPortal {
         protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
         
         /// <summary>
-        /// tasksDetailsDataSource control.
+        /// RectificationTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource tasksDetailsDataSource;
+        protected global::Telerik.Web.UI.RadTextBox RectificationTextBox;
+        
+        /// <summary>
+        /// SubmitRectificationButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SubmitRectificationButton;
+        
+        /// <summary>
+        /// RectificationsDataGrid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadGrid RectificationsDataGrid;
+        
+        /// <summary>
+        /// RectificationsDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource RectificationsDataSource;
         
         /// <summary>
         /// NoteTextBox control.

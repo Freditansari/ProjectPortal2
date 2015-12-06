@@ -10,6 +10,8 @@
         <AssociationConnector Association="TasksModel.FK__Projects__Depart__3C69FB99" ManuallyRouted="false" />
         <EntityTypeShape EntityType="TasksModel.Task" Width="1.5" PointX="6.375" PointY="1.125" />
         <AssociationConnector Association="TasksModel.FK__Tasks__ProjectID__3B75D760" />
+        <EntityTypeShape EntityType="TasksModel.Rectification" Width="1.5" PointX="6.28037463607284" PointY="16.653974362022232" />
+        <AssociationConnector Association="TasksModel.FK_Rectifications_Tasks" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

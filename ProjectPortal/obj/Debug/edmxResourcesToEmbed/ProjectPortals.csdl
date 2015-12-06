@@ -12,6 +12,11 @@
       <End Role="Project" EntitySet="Projects" />
       <End Role="Task" EntitySet="Tasks" />
     </AssociationSet>
+    <EntitySet Name="Rectifications" EntityType="TasksModel.Rectification" />
+    <AssociationSet Name="FK_Rectifications_Tasks" Association="TasksModel.FK_Rectifications_Tasks">
+      <End Role="Task" EntitySet="Tasks" />
+      <End Role="Rectification" EntitySet="Rectifications" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Department">
     <Key>
@@ -62,6 +67,7 @@
     <Property Type="String" Name="Remarks" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Type="DateTime" Name="FinishedDate" Precision="3" />
     <NavigationProperty Name="Project" Relationship="TasksModel.FK__Tasks__ProjectID__3B75D760" FromRole="Task" ToRole="Project" />
+    <NavigationProperty Name="Rectifications" Relationship="TasksModel.FK_Rectifications_Tasks" FromRole="Task" ToRole="Rectification" />
   </EntityType>
   <Association Name="FK__Tasks__ProjectID__3B75D760">
     <End Type="TasksModel.Project" Role="Project" Multiplicity="0..1" />
@@ -72,6 +78,29 @@
       </Principal>
       <Dependent Role="Task">
         <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Rectification">
+    <Key>
+      <PropertyRef Name="RectificationID" />
+    </Key>
+    <Property Type="Int32" Name="RectificationID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="RectificationDate" Precision="3" />
+    <Property Type="String" Name="RectificationNotes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="userID" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="TaskID" />
+    <NavigationProperty Name="Task" Relationship="TasksModel.FK_Rectifications_Tasks" FromRole="Rectification" ToRole="Task" />
+  </EntityType>
+  <Association Name="FK_Rectifications_Tasks">
+    <End Type="TasksModel.Task" Role="Task" Multiplicity="0..1" />
+    <End Type="TasksModel.Rectification" Role="Rectification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Task">
+        <PropertyRef Name="TaskID" />
+      </Principal>
+      <Dependent Role="Rectification">
+        <PropertyRef Name="TaskID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

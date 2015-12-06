@@ -38,5 +38,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Rectifications">
+      <EntityTypeMapping TypeName="TasksModel.Rectification">
+        <MappingFragment StoreEntitySet="Rectifications">
+          <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="RectificationNotes" ColumnName="RectificationNotes" />
+          <ScalarProperty Name="RectificationDate" ColumnName="RectificationDate" />
+          <ScalarProperty Name="RectificationID" ColumnName="RectificationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

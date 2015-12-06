@@ -14,6 +14,11 @@ namespace ProjectPortal
     
     public partial class Task
     {
+        public Task()
+        {
+            this.Rectifications = new HashSet<Rectification>();
+        }
+    
         public int TaskID { get; set; }
         public Nullable<int> ProjectID { get; set; }
         public string TaskName { get; set; }
@@ -27,5 +32,6 @@ namespace ProjectPortal
         public Nullable<System.DateTime> FinishedDate { get; set; }
     
         public virtual Project Project { get; set; }
+        public virtual ICollection<Rectification> Rectifications { get; set; }
     }
 }
