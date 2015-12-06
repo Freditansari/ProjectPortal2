@@ -215,6 +215,7 @@
     <Content Include="Forms\NewTasks.aspx" />
     <Content Include="Forms\ManageTasks.aspx" />
     <Content Include="Forms\ManageProjects.aspx" />
+    <Content Include="Tables\RectificationsTable.txt" />
     <Content Include="TasksDetails.aspx" />
     <EntityDeploy Include="ProjectPortals.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
